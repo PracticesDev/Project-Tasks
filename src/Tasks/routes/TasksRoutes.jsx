@@ -6,18 +6,22 @@ export const TasksRoutes = () => {
 
   return (
     <>
-    <Navbar/>
+      <header className="header">
+        <h1>Tasks App</h1>
+      </header>
 
-    <div >
+      <Navbar />
+
+      <div >
         <Routes>
-            <Route path="inicio" element={ <StartPages/> } />
-            <Route path="tareas" element={ <TasksPages/>} />                    
-
-            {/*<Route path="/" element={<Navigate to="/marvel" />} />*/}
+          <Route path="inicio" element={<StartPages />} />
+          <Route path="tareas" element={<TasksPages />} />
         </Routes>
-    </div>
+      </div>
 
-
-</>
+      <footer class="footer">
+        &copy; Project Tasks - <a href="https://www.linkedin.com/in/jorge-alberto-avella-a58938213/" target="_blank">Jorge Avella</a>
+      </footer>
+    </>
   )
 }

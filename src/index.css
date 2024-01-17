@@ -1,0 +1,180 @@
+/* ESTILOS GENERALES */
+body {
+    background: #d1defa;
+    font-family: sans-serif, Arial, Helvetica;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* ESTILOS CABECERA */
+.header {
+    grid-area: header;
+    background: white;
+    text-align: left;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+}
+
+/* ESTILOS DE LA BARRA DE NAVEGACIÓN */
+.nav {
+    grid-area: nav;
+    background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
+}
+
+.nav > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav li {
+    padding: 10px;
+}
+
+.nav a {
+    display: block;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: lighter;
+    color: white;
+    text-decoration: none;
+    transition: all 300ms;
+}
+
+.nav a:hover {
+    transform: scale(1.1, 1.1);
+}
+
+/* ESTILOS PARA EL CONTENIDO PRINCIPAL */
+.content {
+    grid-area: content;
+    background: #f6f7f9;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.tasks-item {
+    flex-grow: 1;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #ddd;
+    margin: 20px;
+    padding: 20px;
+}
+
+button,
+input[type="submit"],
+input[type="button"] {
+    width: 100%;
+    max-width: 150px; /* Ajusta según sea necesario */
+    background: #0b70e1;
+    color: white;
+    border: 0;
+    outline: 0;
+    padding: 15px;
+    border-radius: 3px;
+    margin-top: 15px;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.tasks-item .edit:hover {
+    background: #e77b00;
+}
+
+.tasks-item .delete:hover {
+    background: #9b0202;
+}
+
+/* ESTILOS BARRA LATERAL */
+.lateral {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f6f7f9;
+    border-left: 1px solid #ddd;
+    padding: 20px;
+}
+
+.lateral > div {
+    box-sizing: border-box;
+    width: 100%; /* O ajusta según sea necesario */
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #ddd;
+}
+
+.lateral input[type="text"],
+.lateral textarea,
+.edit_form input[type="text"],
+.edit_form textarea {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    background: #f6f7f9;
+    color: #454545;
+    width: 100%;
+    opacity: 4;
+    outline: 0;
+    border-color: transparent;
+}
+
+.edit_form {
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+/* ESTILOS PARA EL PIE DE PÁGINA */
+.footer {
+    display: flex;
+    justify-content: center;
+    background: #d1defa;
+    color: #454545;
+    border-top: 1px solid white;
+    text-align: left;
+    line-height: 68px;
+    padding-left: 25px;
+}
+
+.footer a {
+    color: #0b468a;
+    text-decoration: none;
+}
+
+/* MEDIA QUERIES PARA HACERLO RESPONSIVE */
+@media only screen and (max-width: 768px) {
+    .nav {
+        background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
+    }
+
+    .nav a {
+        margin: 0 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tasks-item {
+        max-width: 100%;
+        margin: 20px 0;
+    }
+
+    .lateral > div {
+        width: 100%;
+    }
+}

@@ -5,12 +5,9 @@ import { TasksRoutes } from "../Tasks/routes/TasksRoutes"
 export const AppRouter = () => {
     return (
         <>
-
             <Routes>
-                <Route path='/*' element={ <TasksRoutes/> }/>
+                <Route path='/*' element={<TasksRoutes />} />
             </Routes>
         </>
-
-
     )
 }
