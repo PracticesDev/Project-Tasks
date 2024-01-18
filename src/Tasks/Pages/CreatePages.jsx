@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {  SaveLocalStorage } from '../../Helpers/LocalStorage'
 
 export const CreatePages = () => {
 
@@ -11,7 +12,7 @@ export const CreatePages = () => {
     })
 
     //const {title, description } = dateForm
-    
+
     const captureDate = ( e ) =>{
         e.preventDefault();
         
@@ -28,7 +29,9 @@ export const CreatePages = () => {
 
         setDateForm(tasks)
 
-        console.log(dateForm)
+        //console.log(dateForm)
+
+        SaveLocalStorage("tasks",tasks);
 
     }
 
