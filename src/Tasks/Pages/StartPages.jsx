@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { EditButtonPages } from './EditButtonPages';
+import { SearchTasksPages } from './SearchTasksPages';
 
 export const StartPages = () => {
   //conseguir lo del local
@@ -51,11 +52,18 @@ export const StartPages = () => {
               <h3 className="title">{tasks.title}</h3>
               <p className="description">{tasks.description}</p>
 
-              <button className="edit" onClick={ () => setEdit(tasks.id)}>Editar</button>
+              <button className="edit" onClick={() => setEdit(tasks.id)}>Editar</button>
               <button className="delete" onClick={() => deleteTasks(tasks.id)}>Borrar</button>
-              
-              { edit === tasks.id && (
-                <EditButtonPages/>
+
+              {edit === tasks.id && (
+
+
+                <EditButtonPages
+                  tasks={tasks}
+                  showTasks={showTasks}
+                  setEdit={setEdit}
+                  setList={setList}
+                />
               )}
             </article>
           )

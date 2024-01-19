@@ -1,6 +1,6 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
+import {  Route, Routes } from 'react-router-dom';
 import { Navbar } from '../../ui/Navbar';
-import { StartPages, TasksPages } from '../Pages';
+import { StartPages, SearchTasksPages } from '../Pages';
 
 export const TasksRoutes = () => {
 
@@ -15,10 +15,9 @@ export const TasksRoutes = () => {
       <div >
         <Routes>
           <Route path="inicio" element={<StartPages />} />
-          <Route path="tareas" element={<TasksPages />} />
+          <Route path="tareas" element={<SearchTasksPages />} />
         </Routes>
       </div>
-
       <footer class="footer">
         &copy; Project Tasks - <a href="https://www.linkedin.com/in/jorge-alberto-avella-a58938213/" target="_blank">Jorge Avella</a>
       </footer>
